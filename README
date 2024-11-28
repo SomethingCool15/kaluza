@@ -1,0 +1,25 @@
+# Agify API Testing
+
+This project contains automated tests for the Agify API using a feature file format. The tests are designed to verify the functionality and performance of the API under various conditions.
+
+## Features
+
+- **Age Estimation**: Tests the API's ability to estimate age based on given names.
+- **Error Handling**: Ensures the API correctly handles invalid inputs, such as empty or excessively long names.
+- **Performance**: Measures the response time for valid requests to ensure it meets performance criteria.
+- **Caching**: Tests the API's caching behavior by making repeated requests.
+- **Batch Requests**: Verifies the API's ability to handle multiple names in a single request.
+
+## Scenarios
+
+1. **Get age estimation for various names**: Tests the API with a list of common names.
+2. **Handle empty name parameter**: Ensures the API returns an error for empty name inputs.
+3. **Handle long name parameter**: Checks the API's response to excessively long names.
+4. **Measure response time for a valid name**: Verifies that the response time is within acceptable limits.
+5. **Handle numeric name parameter**: Tests the API's response to numeric inputs.
+6. **Test caching behavior for repeated requests**: Ensures that repeated requests are handled efficiently.
+7. **Get age estimation for multiple names**: Tests the API's ability to process multiple names in a single request.
+
+## Getting Started
+
+To run the tests, first run npm install, then npm run test to run the tests.
