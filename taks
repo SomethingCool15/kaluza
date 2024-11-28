@@ -1,0 +1,21 @@
+Technical Test
+Thanks for your application to the QA Engineer role with Kaluza. Please follow the
+instructions below to create a test plan for an API.
+The Task
+Create BDD scenarios and step definitions to test agify.io. This is a simple API, that
+accepts one parameter, a name (for example, ‘billybob’), and returns the
+guesstimated age of a person with this name (for example, ‘59’).
+The syntax is: https://api.agify.io/?name=billybob
+Include any tests you can think of to ensure that the API functions as expected.
+Further Instructions
+1. This is an API test, not a UI/browser test.
+2. Write in Typescript (preferred) or Javascript
+3. Use Cucumber.
+4. You are not expected to test the accuracy of the data presented, only the
+functionality of the service.
+5. You can submit the results using a public git repository (preferred) - share the
+URL with the Talent Acquisition team. You can make the repository private
+once we review the submission!
+6. Demonstrate the test execution.
+7. Whereas we prefer working software to documentation, a readme file can be
+used to provide more information, including the node and npm versions.
