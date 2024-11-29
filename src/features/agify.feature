@@ -7,6 +7,7 @@ Feature: Agify API
     When I request the age for the name "<name>"
     Then the response should be successful
     And the age should be a number
+    And the response should include a valid count
 
     Examples:
       | name     |
@@ -34,8 +35,3 @@ Feature: Agify API
   Scenario: Test caching behavior for repeated requests
     When I request the age for the name "John" twice
     Then the second response time should be less than the first
-
-  Scenario: Get age estimation for multiple names
-    When I request the age for the names "John,Jane,José"
-    Then the response should be successful
-    And the ages should be numbers

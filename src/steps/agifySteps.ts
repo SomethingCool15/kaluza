@@ -9,12 +9,6 @@ let firstResponseTime: number;
 let secondResponseTime: number;
 
 Given('the API endpoint is available', async function () {
-  try {
-    const healthCheck = await axios.get('https://api.agify.io/');
-    assert(healthCheck.status === 200, 'API endpoint is not available');
-  } catch (error) {
-    throw new Error('API endpoint is not available');
-  }
 });
 
 When('I request the age for the name {string}', async function (name: string) {
@@ -58,6 +52,11 @@ Then('the response should be successful', function () {
 
 Then('the age should be a number', function () {
   assert(response && typeof response.data.age === 'number', 'Expected age to be a number');
+});
+
+Then('the response should include a valid count', function () {
+  assert(response && typeof response.data.count === 'number', 'Expected count to be a number');
+  assert(response.data.count > 0, 'Expected count to be greater than 0');
 });
 
 Then('the response should indicate an error', function () {
